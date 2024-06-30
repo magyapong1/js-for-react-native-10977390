@@ -13,7 +13,29 @@ function processArray(arr) {
   });
 }
 
+/**
+ * Formats an array of strings based on the corresponding processed numbers.
+ * @param {string[]} strings - The input array of strings.
+ * @param {number[]} processedNumbers - The array of processed numbers.
+ * @returns {string[]} - A new array with the formatted strings.
+ */
+function formatArrayStrings(strings, processedNumbers) {
+  return strings.map((str, index) => {
+    if (processedNumbers[index] % 2 === 0) {
+      return str.toUpperCase();
+    } else {
+      return str.toLowerCase();
+    }
+  });
+}
+
 // Example usage
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const processedNumbers = processArray(numbers);
-console.log(processedNumbers); // Output: [3, 4, 9, 16, 15, 36, 21, 64, 27, 100]
+const strings = ["APPLE", "BANANA", "CHERRY", "DATE", "ELDERBERRY"];
+const formattedStrings = formatArrayStrings(strings, processedNumbers);
+
+console.log("Input array:", numbers);
+console.log("Processed array:", processedNumbers);
+console.log("Input strings:", strings);
+console.log("Formatted strings:", formattedStrings);
