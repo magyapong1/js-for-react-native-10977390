@@ -1,4 +1,5 @@
 STUDENT ID: 10977390
+
 TASK 1: A JavaScript file named arrayManipulation.js is created with a function processArray to take an array of numbers as an argument and return a new array where each even number is squared and each odd number
 is tripled.
 
